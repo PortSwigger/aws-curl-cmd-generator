@@ -1,0 +1,13 @@
+Uuid: 2b620ef87a4f4a3fb2dc1a55f4a5e1e5
+ExtensionType: 2
+Name: AWS cURL Command Generator
+RepoName: awscurlburpextension
+ScreenVersion: 1.0.0
+SerialVersion: 1
+MinPlatformVersion: 0
+ProOnly: False
+Author: Dotwut
+ShortDescription: This extension generates AWS Curl commands or cURL with SigV4 from an API, which can be easily copied to the clipboard with a simple right-click.
+EntryPoint: ./awscurl_curlsigv4.py
+BuildCommand: 
+SupportedProducts: Pro, Community
