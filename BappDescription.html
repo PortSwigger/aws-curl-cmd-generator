@@ -1,37 +1,40 @@
-<p><strong>AWS cURL Command Generator</strong></p>
-<p>This extension generates AWS Curl commands or cURL with SigV4 from an API, which can be easily copied to the clipboard with a simple right-click.</p>
-<p>AWSCurl/Curl With SigV4 BurpExtension Burp Extension to create AWS Curl
-commands or cURL with SigV4 from an API
+<p>This is a simple Burp Extension that creates AWS Curl commands or cURL with SigV4 from an API. Using this extension, a user can generate the awscurl command or curl with sigv4 via a right-click context menu. Once selected, the command is conveniently copied to the clipboard ready for use.</p>
 
-Simple right-click functionality to bring up the extension contenxt menu
-and select the extension. The awscurl command or curl with sigv4 will be
-copied to clipboard.
+<h2>Features</h2>
+<p>The extension provides the following features:</p>
+<ul>
+    <li>Generates AWS Curl commands</li>
+    <li>Creates cURL with SigV4</li>
+    <li>Copies the generated command to the clipboard</li>
+</ul>
 
-!(https://github.com/user-attachments/assets/09e9b3d2-2a3b-4edd-a08e-d82ce338060a)
-
-AWS cURL
-
-    awscurl --service <service> --region us-east-1 \
-        -X GET \
-        -H Host: <host> \
-        -H Accept-Encoding: gzip, deflate, br \
-        -H User-Agent: <User-Agent> \
-        -H X-Amz-Date: <date> \
-        -H X-Amz-Security-Token: <Token> \
-        -d {<data>} \
-        <Endpoint-URL>
-
-cURL with SigV4
-
-    curl https://endpoint \
-        --user $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY \
-        -H x-amz-security-token: $AWS_SESSION_TOKEN \
-        --aws-sigv4 aws:amz:<region>:<service> \
-        -H User-Agent: <User-Agent> \
-        -H Accept: application/json, \
-        -H Accept-Language: en-US,en;q=0.5 \
-        -H Accept-Encoding: gzip, deflate, br \
-        -H Content-Type: application/json \
-        -H Origin: * \
-        -H Content-Length: 457 \
-        --data {<data>}</p>
+<h2>Usage</h2>
+<p>The typical usage of this extension is as follows:</p>
+<p>For generating an AWS cURL command:</p>
+<pre><code class=Code>
+awscurl --service &lt;service&gt; --region us-east-1 \\
+    -X GET \\
+    -H Host: &lt;host&gt; \\
+    -H Accept-Encoding: gzip, deflate, br \\
+    -H User-Agent: &lt;User-Agent&gt; \\
+    -H X-Amz-Date: &lt;date&gt; \\
+    -H X-Amz-Security-Token: &lt;Token&gt; \\
+    -d {&lt;data&gt;} \\
+    &lt;Endpoint-URL&gt;
+</code></pre>
+<p>For creating a cURL with SigV4:</p>
+<pre><code class=Code>
+curl https://endpoint \\
+    --user $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY \\
+    -H x-amz-security-token: $AWS_SESSION_TOKEN \\
+    --aws-sigv4 aws:amz:&lt;region&gt;:&lt;service&gt; \\
+    -H User-Agent: &lt;User-Agent&gt; \\
+    -H Accept: application/json, \\
+    -H Accept-Language: en-US,en;q=0.5 \\
+    -H Accept-Encoding: gzip, deflate, br \\
+    -H Content-Type: application/json \\
+    -H Origin: * \\
+    -H Content-Length: 457 \\
+    --data {&lt;data&gt;}
+</code></pre>
+<p>Once the command is generated, the user can paste it directly from their clipboard to their desired terminal or command interface.</p>
